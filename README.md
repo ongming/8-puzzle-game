@@ -47,8 +47,9 @@ Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle
 _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
 
 - Nhấn nút **"Random"** để tạo trạng thái khởi đầu ngẫu nhiên.
+- Sau đó nhấn nút **"Import data"** để truyền dữ liệu từ ô nhập vào trong bài.
 - Chọn **thuật toán AI** từ danh sách để chạy thuật toán để giải câu đó.
-- phis dưới sẽ hiển thị thười gian chạy và cần bao nhiêu bước để giải.
+- Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
 ---
 
 ## 💻 Công nghệ sử dụng
@@ -56,6 +57,3 @@ _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
 - Ngôn  ngữ Python
 - Tkinter – GUI Framework
 - GIF animation
-
-
-
