@@ -18,9 +18,9 @@ Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
-| 1   | Breadth-First Search (BFS)             | ![BFS](gifs/bfs.gif)        |
-| 2   | Depth-First Search (DFS)               | ![DFS](gifs/dfs.gif)        |
-| 3   | Uniform Cost Search (UCS)              | ![UCS](gifs/ucs.gif)        |
+| 1   | Breadth-First Search (BFS)             | ![BFS](https://github.com/user-attachments/assets/ff6ca2ac-9ad2-4fbe-92e7-972df04121e5) |
+| 2   | Depth-First Search (DFS)               | ![DFS](https://github.com/user-attachments/assets/6896d1ae-613c-4a25-9b21-e002f36d4ab0) |
+| 3   | Uniform Cost Search (UCS)              | ![UCS](https://github.com/user-attachments/assets/1d6c868e-db11-44b7-a8f2-a9b67c64a3ef) |
 | 4   | Iterative Deepening                    | ![ID](gifs/iterative.gif)   |
 | 5   | Greedy Best-First Search               | ![Greedy](gifs/greedy.gif)  |
 | 6   | A* Search                               | ![A*](gifs/astar.gif)       |
@@ -39,7 +39,6 @@ Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle
 | 19  | Min-Conflicts                          | ![MinC](gifs/minconflict.gif)|
 | 20  | ??? *(Tuỳ bạn bổ sung thêm nếu còn slot)* | ![20](gifs/placeholder.gif) |
 
-> 📌 *Lưu ý*: Hãy thay thế `gifs/xxx.gif` bằng đường dẫn thực tế tương ứng trong thư mục của bạn.
 
 ---
 
@@ -54,6 +53,9 @@ _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
 
 ## 💻 Công nghệ sử dụng
 
-- Python 3.x
+- Ngôn  ngữ Python
 - Tkinter – GUI Framework
 - GIF animation
+
+
+
