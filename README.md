@@ -22,7 +22,7 @@ _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
  ### CÁCH TRUYỀN DỮ LIỆU:
 - Nhấn nút **"Random"** để tạo trạng thái khởi đầu ngẫu nhiên và truyền thẳng trực tiếp dữ liệu vào trong bài.
 - Sau khi nhập giữ liệu bạn hãy nhấn nút **"Import data"** để truyền dữ liệu từ ô nhập vào trong bài.
-  ### CÁCH CHƠI:
+ ### CÁCH CHƠI:
 - Chọn **thuật toán AI** từ danh sách để chạy thuật toán để giải câu đó.
 - Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
 ---
