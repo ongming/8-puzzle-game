@@ -4,6 +4,11 @@
 
 ---
 
+## 2. 🎯 Mục tiêu của dự án
+
+Mục tiêu chính của dự án là triển khai một nền tảng giải bài toán 8-puzzle một cách hiệu quả, cho phép người dùng có thể quan sát và thực hành giải bài toán này thông qua giao diện trực quan. Dự án tập trung áp dụng nhiều thuật toán trí tuệ nhân tạo đa dạng, từ những phương pháp tìm kiếm cơ bản cho đến các thuật toán nâng cao, nhằm khai thác và so sánh hiệu suất của từng thuật toán trong việc tìm ra lời giải tối ưu hoặc gần tối ưu. Ngoài ra, dự án còn hướng tới việc cung cấp một công cụ hữu ích cho mục đích giáo dục và nghiên cứu, giúp người học và nhà nghiên cứu hiểu rõ hơn về các kỹ thuật tìm kiếm trong không gian trạng thái, từ đó nâng cao kiến thức và kỹ năng về trí tuệ nhân tạo và giải thuật.
+
+---
 ## 🎮 Giao diện trò chơi
 
 Hình ảnh giao diện game được xây dựng bằng thư viện Tkinter:
@@ -11,7 +16,16 @@ Hình ảnh giao diện game được xây dựng bằng thư viện Tkinter:
 ![image](https://github.com/user-attachments/assets/9470a0fc-1505-4889-9638-9fa4d0ff1200)
 
 ---
+## 🕹️ Hướng dẫn cách chơi
 
+_Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
+- CÁCH TRUYỀN DỮ LIỆU:
+- Nhấn nút **"Random"** để tạo trạng thái khởi đầu ngẫu nhiên và truyền thẳng trực tiếp dữ liệu vào trong bài.
+- Sau khi nhập giữ liệu bạn hãy nhấn nút **"Import data"** để truyền dữ liệu từ ô nhập vào trong bài.
+- CÁCH CHƠI:
+- Chọn **thuật toán AI** từ danh sách để chạy thuật toán để giải câu đó.
+- Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
+---
 ## 🧠 Các thuật toán được tích hợp
 Trong đồ án này, hệ thống được xây dựng với khả năng hỗ trợ tới 20 thuật toán trí tuệ nhân tạo để tự động giải bài toán 8-Puzzle. Mỗi thuật toán có đặc điểm và cách tiếp cận riêng biệt nhằm tìm ra chuỗi di chuyển tối ưu để đạt được trạng thái đích.
 
@@ -50,16 +64,6 @@ Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle
 
 ---
 
-## 🕹️ Hướng dẫn cách chơi
-
-_Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
-- CÁCH TRUYỀN DỮ LIỆU:
-- Nhấn nút **"Random"** để tạo trạng thái khởi đầu ngẫu nhiên và truyền thẳng trực tiếp dữ liệu vào trong bài.
-- Sau khi nhập giữ liệu bạn hãy nhấn nút **"Import data"** để truyền dữ liệu từ ô nhập vào trong bài.
-- CÁCH CHƠI:
-- Chọn **thuật toán AI** từ danh sách để chạy thuật toán để giải câu đó.
-- Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
----
 
 ## 💻 Công nghệ sử dụng
 
