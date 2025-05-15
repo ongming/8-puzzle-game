@@ -115,7 +115,16 @@ Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward 
 | 3  | Min-Conflicts                          | ![MIN CONFLICTS](https://github.com/user-attachments/assets/a839d9d5-832f-437a-b370-82a9c0bdc5cc)|
 
 ---
+## Kết luận
+Bài toán 8-Puzzle là một ví dụ điển hình về tìm kiếm trong không gian trạng thái, và việc áp dụng đa dạng các thuật toán giải quyết không chỉ giúp hiểu rõ về các phương pháp tìm kiếm mà còn mở rộng khả năng so sánh, đánh giá hiệu suất của từng kỹ thuật trong thực tế. Các thuật toán uninformed search như BFS, DFS tuy đơn giản nhưng có thể gặp hạn chế về mặt hiệu quả khi không biết trước trạng thái đích. Trong khi đó, các thuật toán informed search như A* và IDA* tận dụng tốt thông tin heuristic, giúp rút ngắn thời gian tìm lời giải tối ưu.
 
+Nhóm thuật toán local search và metaheuristic cung cấp những phương pháp linh hoạt, khả năng xử lý các trường hợp phức tạp và không gian trạng thái lớn, tuy không luôn đảm bảo tối ưu tuyệt đối nhưng thích hợp cho bài toán thực tế cần giải nhanh. Các thuật toán học tăng cường và machine learning như Sarsa, Q-Learning mở ra hướng tiếp cận mới, tận dụng kinh nghiệm để tự điều chỉnh chiến lược giải quyết, rất hứa hẹn cho các bài toán phức tạp hơn.
+
+Cuối cùng, nhóm thuật toán xử lý ràng buộc CSP với Backtracking và các kỹ thuật tối ưu đi kèm giúp giải quyết bài toán một cách chính xác, hiệu quả trong các tình huống cần thỏa mãn nhiều điều kiện. Sự đa dạng này cho thấy rằng không có thuật toán “tuyệt đối nhất” mà mỗi thuật toán đều có ưu, nhược điểm và phù hợp với từng loại bài toán, yêu cầu cụ thể.
+
+Việc nghiên cứu, triển khai và so sánh các thuật toán này không chỉ nâng cao kiến thức lý thuyết mà còn cung cấp công cụ thực tế để phát triển các ứng dụng trí tuệ nhân tạo có khả năng giải quyết các vấn đề phức tạp trong đời sống và kỹ thuật.
+
+---
 
 ## 💻 Công nghệ sử dụng
 
