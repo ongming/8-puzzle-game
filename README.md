@@ -52,7 +52,6 @@ Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuris
 | 3   | Uniform Cost Search (UCS)              | ![UCS](https://github.com/user-attachments/assets/1d6c868e-db11-44b7-a8f2-a9b67c64a3ef) |
 | 4   | Iterative Deepening                    | ![ID](https://github.com/user-attachments/assets/27f72802-3597-405b-8c6e-a66f92dcb3f4)|
 
----
 Đánh giá
 - Các thuật toán như BFS, DFS, UCS, và Iterative Deepening không sử dụng thông tin về trạng thái đích (heuristic), do đó thường khám phá toàn bộ không gian trạng thái một cách mù quáng. Chúng có thể tìm được lời giải đúng (đặc biệt là BFS và UCS), nhưng thường mất nhiều thời gian và tài nguyên tính toán, đặc biệt với không gian trạng thái lớn như 8-Puzzle.
 
