@@ -54,6 +54,7 @@ Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuris
 
 
 Đánh giá
+
 Các thuật toán như BFS, DFS, UCS, và Iterative Deepening không sử dụng thông tin về trạng thái đích (heuristic), do đó thường khám phá toàn bộ không gian trạng thái một cách mù quáng. Chúng có thể tìm được lời giải đúng (đặc biệt là BFS và UCS), nhưng thường mất nhiều thời gian và tài nguyên tính toán, đặc biệt với không gian trạng thái lớn như 8-Puzzle.
 
 Ưu điểm: Dễ cài đặt, đảm bảo tìm ra lời giải nếu tồn tại (BFS, UCS), có thể dùng để đánh giá độ sâu của lời giải.
