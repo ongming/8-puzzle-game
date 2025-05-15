@@ -40,10 +40,9 @@ Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle
 ---
 ## 1. Uninformed Search Algorithms
 Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuristic mà chỉ dựa vào cấu trúc không gian trạng thái:
-- Breadth-First Search (BFS)
-- Depth-First Search (DFS)
-- Uniform Cost Search (UCS)
-- Iterative Deepening
+- **Breadth-First Search (BFS)**: Tìm kiếm theo tầng, mở rộng các nút theo cấp độ từ gốc đến sâu dần, đảm bảo tìm được lời giải ngắn nhất về số bước đi nhưng có thể tiêu tốn bộ nhớ lớn khi không gian trạng thái rộng.
+- **Depth-First Search (DFS)**: Tìm kiếm theo chiều sâu, đi sâu đến cùng một nhánh trước khi quay lui. Ưu điểm là sử dụng ít bộ nhớ nhưng không đảm bảo tìm lời giải ngắn nhất và có thể rơi vào vòng lặp vô tận nếu không kiểm soát.
+- **Uniform Cost Search (UCS)**: Là biến thể của BFS nhưng mở rộng các nút dựa trên chi phí tích lũy thấp nhất, thích hợp khi các bước di chuyển có chi phí khác nhau.
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -54,9 +53,6 @@ Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuris
 
 ## 2. Informed Search Algorithms
 Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic để dẫn đường tìm kiếm hiệu quả hơn:
-- Greedy Best-First Search
-- A* Search
-- Iterative Deepening A* (IDA*)
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -66,12 +62,6 @@ Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic 
 
 ## 3. Local Search and Metaheuristic Algorithms
 Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng các kỹ thuật tối ưu hóa để tìm giải pháp gần tối ưu:
-- Steepest Hill Climbing (SHC)
-- Steppest Ascent Hill Climbing (SAHC)
-- Stochastic Hill Climbing
-- Simulated Annealing
-- Genetic Algorithm
-- Beam Search
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -84,17 +74,13 @@ Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng c
 
 ## 4. Specialized and Advanced Search Algorithms
 Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đặc biệt để giải quyết các bài toán phức tạp hơn:
-- AND-OR BFS
-- Belief-based Search
 
 | 1  | AND-OR BFS                             | ![AND OR](https://github.com/user-attachments/assets/b40d2300-e05c-4683-896e-1af0668c0017)|
 | 2  | Belief-based Search                    | ![BELIEF](https://github.com/user-attachments/assets/77fe9529-f19b-4e43-af15-a4aec78db211)|
 
 ## 5. Reinforcement Learning and Machine Learning Based Algorithms
 Nhóm các thuật toán dựa trên học tăng cường hoặc học máy để tìm giải pháp thông qua việc học:
-- Sarsa
-- Q Learning
-- 
+
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
 | 1  | Sarsa                                  | ![SARSA](https://github.com/user-attachments/assets/05012cc7-5c03-4cc2-bceb-f290eee58fc5)|
@@ -102,9 +88,6 @@ Nhóm các thuật toán dựa trên học tăng cường hoặc học máy đ�
 
 ## 6. Constraint Satisfaction Problem (CSP) Algorithms
 Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward checking để tối ưu hóa tìm kiếm trong các bài toán thỏa mãn ràng buộc:
-- Backtracking
-- Backtracking + Forward Checking
-- Min-Conflicts
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
