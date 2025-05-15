@@ -1,4 +1,5 @@
-﻿from pickle import POP
+import os
+import sys
 import time
 from collections import deque
 import heapq
@@ -8,8 +9,6 @@ import random
 import torch
 import math
 from copy import deepcopy
-
-DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 def board_to_tuple(board):
     return tuple(tuple(row) for row in board)
@@ -727,7 +726,6 @@ def backtracking_with_forward_checking(start, goal, max_depth=50):
             if new_board and board_to_tuple(new_board) not in visited:
                 possible_moves.append((heuristic(new_board, goal), new_board))
         
-        # Sắp xếp các trạng thái theo heuristic để ưu tiên trạng thái gần mục tiêu
         possible_moves.sort(key=lambda x: x[0])
         for _, new_board in possible_moves:
             if forward_check(new_board, depth + 1):
@@ -934,16 +932,26 @@ class PuzzleApp:
 
     def solve_puzzle(self, algorithm):
         start_time = time.perf_counter()
+
+        if self.start_state == self.goal_state:
+            end_time = time.perf_counter()
+            execution_time = end_time - start_time
+            self.time_label.config(text=f"Time: {execution_time:.6f}s")
+            messagebox.showinfo("Thành công", "Trạng thái bắt đầu đã là đích!")
+            return
+
         self.solution = algorithm(self.start_state, self.goal_state)
         end_time = time.perf_counter()
         execution_time = end_time - start_time
         self.time_label.config(text=f"Time: {execution_time:.6f}s")
+
         if self.solution:
             self.current_step = 0
             self.step_count = 0
             self.animate_solution()
         else:
             messagebox.showerror("Error", "No solution found!")
+
 
     def animate_solution(self):
         if self.current_step < len(self.solution):
@@ -953,6 +961,8 @@ class PuzzleApp:
             self.step_label.config(text=f"Steps: {self.step_count}")
 
             self.root.after(500, self.animate_solution)
+        else:
+            messagebox.showinfo("Thành công", "Đã giải xong bài toán!")
 
     def generate_random(self):
         numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -1003,4 +1013,4 @@ class PuzzleApp:
 if __name__ == "__main__":
     root = tk.Tk()
     app = PuzzleApp(root)
-    root.mainloop()
+    root.mainloop() 
