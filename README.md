@@ -35,6 +35,7 @@ Trong nhóm thuật toán tìm kiếm theo heuristic, Greedy Best-First Search c
 
 Bên cạnh đó, các thuật toán metaheuristic như Genetic Algorithm mô phỏng cơ chế chọn lọc tự nhiên để tiến hóa các giải pháp tốt hơn qua các thế hệ. Thuật toán AND-OR BFS mở rộng tìm kiếm sang không gian hành động có điều kiện, còn Belief-based Search dựa trên thông tin niềm tin về trạng thái hệ thống. Thuật toán học tăng cường Sarsa và Q-learning cho phép máy học cách tối ưu hành động dựa trên trải nghiệm tương tác. Phương pháp Backtracking và Backtracking kết hợp Forward Checking là các kỹ thuật tìm kiếm trở lui có kiểm soát nhằm tránh các trạng thái không khả thi. Cuối cùng, Min-Conflicts là thuật toán hiệu quả cho bài toán thỏa mãn ràng buộc, giảm xung đột trong giải pháp.
 
+---
 Dưới đây là bảng tổng hợp kèm theo các ảnh GIF mô phỏng trực quan minh họa quá trình giải của từng thuật toán:
 Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle một cách tự động. Dưới đây là danh sách thuật toán và hình ảnh động minh họa từng thuật toán:
 ---
