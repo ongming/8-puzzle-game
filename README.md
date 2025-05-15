@@ -85,6 +85,8 @@ Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đ�
 - **AND-OR BFS**: Giải quyết các bài toán không chắc chắn hoặc có nhiều lựa chọn thay thế, tìm kiếm trong không gian trạng thái dạng cây AND-OR, hỗ trợ lý luận phức tạp hơn.
 - **Belief-based Search**: Sử dụng thông tin niềm tin (belief) về trạng thái thực sự trong môi trường không chắc chắn để hướng dẫn tìm kiếm, áp dụng trong các tình huống có thông tin bị thiếu hoặc nhiễu.
 
+| STT | Thuật toán                             | GIF mô phỏng                |
+|-----|----------------------------------------|-----------------------------|
 | 1  | AND-OR BFS                             | ![AND OR](https://github.com/user-attachments/assets/b40d2300-e05c-4683-896e-1af0668c0017)|
 | 2  | Belief-based Search                    | ![BELIEF](https://github.com/user-attachments/assets/77fe9529-f19b-4e43-af15-a4aec78db211)|
 
