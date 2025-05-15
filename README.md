@@ -172,3 +172,12 @@ Việc nghiên cứu, triển khai và so sánh các thuật toán này không c
 - Ngôn  ngữ Python
 - Tkinter – GUI Framework
 - GIF animation
+
+---
+
+📚 Tài liệu sách
+- Stuart Russell, Peter Norvig (2020). Artificial Intelligence: A Modern Approach (4th Edition). Pearson.
+→ Giáo trình kinh điển, trình bày chi tiết về các thuật toán tìm kiếm như BFS, DFS, A*, Hill Climbing, Simulated Annealing, Q-learning,...
+
+- Richard E. Neapolitan & Xia Jiang (2018). Artificial Intelligence: With an Introduction to Machine Learning. CRC Press.
+→ Cung cấp lý thuyết nền về các thuật toán và phương pháp học máy liên quan đến Reinforcement Learning và tìm kiếm trạng thái.
