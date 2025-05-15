@@ -53,6 +53,9 @@ Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuris
 
 ## 2. Informed Search Algorithms
 Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic để dẫn đường tìm kiếm hiệu quả hơn:
+- **Greedy Best-First Search**: Luôn chọn mở rộng nút có giá trị heuristic nhỏ nhất, tìm kiếm nhanh nhưng không đảm bảo lời giải tối ưu.
+- **A* Search**: Kết hợp chi phí đã đi và ước lượng còn lại, luôn đảm bảo tìm lời giải tối ưu nếu hàm heuristic là hợp lệ (không vượt quá chi phí thực).
+- **Iterative Deepening A* (IDA*)**: Kết hợp phương pháp iterative deepening và A*, giảm tiêu thụ bộ nhớ so với A* truyền thống nhưng vẫn đảm bảo lời giải tối ưu.
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -62,6 +65,11 @@ Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic 
 
 ## 3. Local Search and Metaheuristic Algorithms
 Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng các kỹ thuật tối ưu hóa để tìm giải pháp gần tối ưu:
+- **Steepest Hill Climbing (SHC) & Steppest Ascent Hill Climbing (SAHC)**: Luôn chọn bước đi làm cải thiện lớn nhất trên đường đi lên “đồi”, nhanh nhưng dễ bị mắc kẹt tại điểm tối ưu cục bộ.
+- **Stochastic Hill Climbing**: Giới thiệu tính ngẫu nhiên trong chọn bước đi để tránh bị kẹt tại điểm cục bộ.
+- **Simulated Annealing**: Giả lập quá trình làm nguội vật lý, cho phép chấp nhận các bước đi tạm thời xấu để thoát khỏi điểm tối ưu cục bộ.
+- **Genetic Algorithm**: Thuật toán tiến hóa mô phỏng quá trình chọn lọc tự nhiên, sử dụng các thao tác lai ghép và đột biến để tạo ra các thế hệ lời giải tốt hơn.
+- **Beam Search**: Giới hạn số lượng nút mở rộng tại mỗi bước để tiết kiệm bộ nhớ, chọn ra một số lời giải hứa hẹn nhất để tiếp tục mở rộng.
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -74,12 +82,16 @@ Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng c
 
 ## 4. Specialized and Advanced Search Algorithms
 Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đặc biệt để giải quyết các bài toán phức tạp hơn:
+- **AND-OR BFS**: Giải quyết các bài toán không chắc chắn hoặc có nhiều lựa chọn thay thế, tìm kiếm trong không gian trạng thái dạng cây AND-OR, hỗ trợ lý luận phức tạp hơn.
+- **Belief-based Search**: Sử dụng thông tin niềm tin (belief) về trạng thái thực sự trong môi trường không chắc chắn để hướng dẫn tìm kiếm, áp dụng trong các tình huống có thông tin bị thiếu hoặc nhiễu.
 
 | 1  | AND-OR BFS                             | ![AND OR](https://github.com/user-attachments/assets/b40d2300-e05c-4683-896e-1af0668c0017)|
 | 2  | Belief-based Search                    | ![BELIEF](https://github.com/user-attachments/assets/77fe9529-f19b-4e43-af15-a4aec78db211)|
 
 ## 5. Reinforcement Learning and Machine Learning Based Algorithms
 Nhóm các thuật toán dựa trên học tăng cường hoặc học máy để tìm giải pháp thông qua việc học:
+- **Sarsa**: Thuật toán học tăng cường on-policy, học chính sách bằng cách cập nhật giá trị hành động dựa trên trải nghiệm thực tế, phù hợp với bài toán có trạng thái và hành động rời rạc.
+- **Q Learning**: Thuật toán học tăng cường off-policy, học giá trị tối ưu của các hành động mà không cần thực hiện chính sách hiện tại, giúp đạt hiệu suất tốt trong việc học các chính sách tối ưu.
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
@@ -88,6 +100,10 @@ Nhóm các thuật toán dựa trên học tăng cường hoặc học máy đ�
 
 ## 6. Constraint Satisfaction Problem (CSP) Algorithms
 Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward checking để tối ưu hóa tìm kiếm trong các bài toán thỏa mãn ràng buộc:
+- **Backtracking**: Kỹ thuật đệ quy tìm kiếm lời giải bằng cách thử từng lựa chọn và quay lui khi phát hiện mâu thuẫn, dễ hiểu nhưng có thể tốn thời gian nếu không được tối ưu.
+- **Backtracking + Forward Checking**: Kết hợp forward checking để loại bỏ các lựa chọn không hợp lệ trước khi đi sâu vào các nhánh tìm kiếm, giúp giảm số lượng bước đi không cần thiết.
+- **Min-Conflicts**: Thuật toán tìm kiếm cục bộ chuyên dùng cho các bài toán thỏa mãn ràng buộc, chọn các biến gây xung đột nhiều nhất và điều chỉnh để giảm thiểu xung đột.
+
 
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
