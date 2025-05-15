@@ -72,6 +72,12 @@ Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic 
 | 2   | A* Search                              | ![A SAO](https://github.com/user-attachments/assets/7e6e91da-24d8-47c0-8835-136cddf8046d)|
 | 3   | Iterative Deepening A* (IDA*)          | ![IDASAO](https://github.com/user-attachments/assets/0587b55d-d72c-4e84-a317-12fd8d68edd4)|
 
+## Đánh giá:
+- Các thuật toán như Greedy Best-First Search, A* và IDA* sử dụng hàm heuristic để hướng dẫn quá trình tìm kiếm. Trong đó, A* là một trong những thuật toán mạnh mẽ và phổ biến nhất cho 8-Puzzle vì tính chính xác và hiệu quả của nó.
+
+- Ưu điểm: Giảm thời gian tìm kiếm đáng kể, thường đưa ra lời giải ngắn và tối ưu (đặc biệt A*).
+
+- Nhược điểm: Phụ thuộc vào chất lượng heuristic; Greedy có thể nhanh nhưng không tối ưu; A* tiêu tốn nhiều bộ nhớ.
 ## 3. Local Search and Metaheuristic Algorithms
 Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng các kỹ thuật tối ưu hóa để tìm giải pháp gần tối ưu:
 - **Steepest Hill Climbing (SHC) & Steppest Ascent Hill Climbing (SAHC)**: Luôn chọn bước đi làm cải thiện lớn nhất trên đường đi lên “đồi”, nhanh nhưng dễ bị mắc kẹt tại điểm tối ưu cục bộ.
@@ -88,6 +94,13 @@ Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng c
 | 4  | Genetic Algorithm                      | ![GENETIC](https://github.com/user-attachments/assets/69ebcc7d-b465-4774-a6c3-835922a2b363)|
 | 5  | Stochastic Hill Climbing               | ![STOCHASTIC](https://github.com/user-attachments/assets/5a523082-ee5a-46a0-ba32-09c4c6b80125)|
 | 6  | Steppest Ascent hill climbing          |![SAHC](https://github.com/user-attachments/assets/bf983941-d933-439c-aa4d-03347543beb3)|
+    
+## Đánh giá:
+- Bao gồm các thuật toán như Steepest Hill Climbing, Stochastic Hill Climbing, Simulated Annealing, Beam Search và Genetic Algorithm. Những thuật toán này không đi theo đường tìm kiếm toàn cục mà thay vào đó tìm lời giải thông qua cải tiến cục bộ và ngẫu nhiên hóa.
+
+- Ưu điểm: Khả năng xử lý không gian trạng thái lớn, tránh được bẫy cục bộ (đặc biệt là Simulated Annealing và Genetic Algorithm).
+
+- Nhược điểm: Không đảm bảo tìm được lời giải tối ưu; dễ rơi vào bẫy tối ưu cục bộ; hiệu quả phụ thuộc nhiều vào tham số và cách khởi tạo.
 
 ## 4. Specialized and Advanced Search Algorithms
 Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đặc biệt để giải quyết các bài toán phức tạp hơn:
@@ -99,6 +112,13 @@ Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đ�
 | 1  | AND-OR BFS                             | ![AND OR](https://github.com/user-attachments/assets/b40d2300-e05c-4683-896e-1af0668c0017)|
 | 2  | Belief-based Search                    | ![BELIEF](https://github.com/user-attachments/assets/77fe9529-f19b-4e43-af15-a4aec78db211)|
 
+## Đánh giá:
+- Bao gồm AND-OR Search, Belief-based Search, Min-Conflicts, và Steepest Ascent Hill Climbing – là các phương pháp mở rộng hoặc đặc thù cho môi trường bất định hoặc bài toán logic phức tạp. Một số trong đó được xây dựng để xử lý bài toán có tính không chắc chắn hoặc nhiều mục tiêu song song.
+
+- Ưu điểm: Đa dạng, linh hoạt, có thể mở rộng sang các bài toán lớn hơn.
+
+- Nhược điểm: Ít phù hợp với 8-Puzzle thông thường; một số thuật toán khá phức tạp và khó triển khai hiệu quả.
+
 ## 5. Reinforcement Learning and Machine Learning Based Algorithms
 Nhóm các thuật toán dựa trên học tăng cường hoặc học máy để tìm giải pháp thông qua việc học:
 - **Sarsa**: Thuật toán học tăng cường on-policy, học chính sách bằng cách cập nhật giá trị hành động dựa trên trải nghiệm thực tế, phù hợp với bài toán có trạng thái và hành động rời rạc.
@@ -109,18 +129,31 @@ Nhóm các thuật toán dựa trên học tăng cường hoặc học máy đ�
 | 1  | Sarsa                                  | ![SARSA](https://github.com/user-attachments/assets/05012cc7-5c03-4cc2-bceb-f290eee58fc5)|
 | 2  | Q learning                             | ![Q LEARNING ](https://github.com/user-attachments/assets/0e15308f-4cc4-4bfd-a4d7-f0abd9a002c3)|
 
+## Đánh giá:
+- Q-Learning và Sarsa đại diện cho nhóm học tăng cường, nơi thuật toán tự học thông qua tương tác với môi trường để dần tối ưu hóa chiến lược giải bài toán. Với 8-Puzzle, nhóm này có thể học được giải pháp tối ưu mà không cần mô hình hóa trạng thái rõ ràng.
+
+- Ưu điểm: Có thể tổng quát hóa tốt, không cần mô hình hóa tường minh; thích hợp cho các bài toán học lâu dài.
+
+- Nhược điểm: Cần nhiều thời gian để huấn luyện; yêu cầu điều chỉnh tham số tốt (learning rate, discount factor).
+
 ## 6. Constraint Satisfaction Problem (CSP) Algorithms
 Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward checking để tối ưu hóa tìm kiếm trong các bài toán thỏa mãn ràng buộc:
 - **Backtracking**: Kỹ thuật đệ quy tìm kiếm lời giải bằng cách thử từng lựa chọn và quay lui khi phát hiện mâu thuẫn, dễ hiểu nhưng có thể tốn thời gian nếu không được tối ưu.
 - **Backtracking + Forward Checking**: Kết hợp forward checking để loại bỏ các lựa chọn không hợp lệ trước khi đi sâu vào các nhánh tìm kiếm, giúp giảm số lượng bước đi không cần thiết.
 - **Min-Conflicts**: Thuật toán tìm kiếm cục bộ chuyên dùng cho các bài toán thỏa mãn ràng buộc, chọn các biến gây xung đột nhiều nhất và điều chỉnh để giảm thiểu xung đột.
 
-
 | STT | Thuật toán                             | GIF mô phỏng                |
 |-----|----------------------------------------|-----------------------------|
 | 1  | Backtracking                           | ![BACKTRACKING](https://github.com/user-attachments/assets/55d52c48-40b6-44db-b8bd-e4691661f9b4)|
 | 2  | Backtracking + Forward Checking        | ![BACKTRACKING WITH](https://github.com/user-attachments/assets/37af4a98-26e1-4fab-97d5-d44ba0986782)|
 | 3  | Min-Conflicts                          | ![MIN CONFLICTS](https://github.com/user-attachments/assets/a839d9d5-832f-437a-b370-82a9c0bdc5cc)|
+
+## Đánh giá:
+- Backtracking và Backtracking kết hợp Forward Checking là các kỹ thuật cổ điển trong giải bài toán ràng buộc (Constraint Satisfaction Problems). Mặc dù ít dùng cho 8-Puzzle, nhóm này cung cấp cái nhìn khác về cách giải quyết vấn đề theo hướng phân nhánh và kiểm tra điều kiện hợp lệ.
+
+- Ưu điểm: Đảm bảo lời giải hợp lệ; đơn giản và dễ hiểu.
+
+- Nhược điểm: Hiệu suất thấp với bài toán không có ràng buộc cụ thể như 8-Puzzle; Forward Checking có cải tiến nhưng vẫn không tối ưu bằng A*.
 
 ---
 ## Kết luận
