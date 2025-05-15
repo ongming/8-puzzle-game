@@ -1,4 +1,4 @@
-# 🧩 8-Puzzle Game – Đồ án Python
+# 🧩 8-Puzzle Game – Đồ án trí tuệ nhân tạo
 
 Đây là đồ án Python mô phỏng trò chơi **8-Puzzle** – một bài toán cổ điển trong trí tuệ nhân tạo, nơi người chơi phải di chuyển các ô số để đạt được trạng thái mục tiêu.
 
