@@ -25,6 +25,7 @@ _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
  ### CÁCH CHƠI:
 - Chọn **thuật toán AI** từ danh sách để chạy thuật toán để giải câu đó.
 - Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
+- Bên cạnh 8 ô chữ chính là hiển thị các trạng thái của 8 puzzle sau từng bước giải.
 ---
 ## 🧠 Các thuật toán được tích hợp
 Trong đồ án này, hệ thống được xây dựng với khả năng hỗ trợ tới 20 thuật toán trí tuệ nhân tạo để tự động giải bài toán 8-Puzzle. Mỗi thuật toán có đặc điểm và cách tiếp cận riêng biệt nhằm tìm ra chuỗi di chuyển tối ưu để đạt được trạng thái đích.
