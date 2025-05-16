@@ -13,7 +13,7 @@ Mục tiêu chính của dự án là triển khai một nền tảng giải bà
 
 Hình ảnh giao diện game được xây dựng bằng thư viện Tkinter:
 
-![image](https://github.com/user-attachments/assets/9470a0fc-1505-4889-9638-9fa4d0ff1200)
+![Screenshot 2025-05-16 230648](https://github.com/user-attachments/assets/1b4ec3d3-0727-444e-9cc7-6493801633a2)
 
 ---
 ## 🕹️ Hướng dẫn cách chơi
