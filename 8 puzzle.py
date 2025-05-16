@@ -9,6 +9,7 @@ import random
 import torch
 import math
 from copy import deepcopy
+DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 def board_to_tuple(board):
     return tuple(tuple(row) for row in board)
@@ -768,7 +769,8 @@ def min_conflicts_8_puzzle(start, goal, max_steps=1000):
     return None  
 
 class PuzzleApp:
-    def __init__(self, root):   
+    def __init__(self, root):
+        self.flag = False
         self.root = root
         self.root.configure(bg="lightgray")
         self.root.title("8-Puzzle Solver")
@@ -796,64 +798,80 @@ class PuzzleApp:
                 self.buttons[i][j] = tk.Button(root, text="", width=5, height=2, font=("Arial", 20, "bold"))
                 self.buttons[i][j].grid(row=i, column=j, padx=5, pady=10)
         
+        self.state_label = tk.Label(self.root, text="State Tuple:", font=("Arial", 12))
+        self.state_label.place(x=330, y=20)
+
+        self.state_frame = tk.Frame(self.root)
+        self.state_frame.place(x=330, y=50, width=100, height=260)
+
+        self.state_scrollbar = tk.Scrollbar(self.state_frame)
+        self.state_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.state_text = tk.Text(self.state_frame, height=10, width=25, font=("Arial", 15), yscrollcommand=self.state_scrollbar.set)
+        self.state_text.pack(side=tk.LEFT, fill=tk.BOTH)
+
+        self.state_scrollbar.config(command=self.state_text.yview)
+
+
+
         self.text_box1 = tk.Text(root, height=2, width=5)
-        self.text_box1.place(x=1000, y=20)
+        self.text_box1.place(x=1100, y=20)
 
         self.text_box2 = tk.Text(root, height=2, width=5)
-        self.text_box2.place(x=1060, y=20)
+        self.text_box2.place(x=1160, y=20)
 
         self.text_box3 = tk.Text(root, height=2, width=5)
-        self.text_box3.place(x=1120, y=20)
+        self.text_box3.place(x=1220, y=20)
 
         self.text_box4 = tk.Text(root, height=2, width=5)
-        self.text_box4.place(x=1000, y=70)
+        self.text_box4.place(x=1100, y=70)
 
         self.text_box5 = tk.Text(root, height=2, width=5)
-        self.text_box5.place(x=1060, y=70)
+        self.text_box5.place(x=1160, y=70)
 
         self.text_box6 = tk.Text(root, height=2, width=5)
-        self.text_box6.place(x=1120, y=70)
+        self.text_box6.place(x=1220, y=70)
 
         self.text_box7 = tk.Text(root, height=2, width=5)
-        self.text_box7.place(x=1000, y=120)
+        self.text_box7.place(x=1100, y=120)
 
         self.text_box8 = tk.Text(root, height=2, width=5)
-        self.text_box8.place(x=1060, y=120)
+        self.text_box8.place(x=1160, y=120)
 
         self.text_box9 = tk.Text(root, height=2, width=5)
-        self.text_box9.place(x=1120, y=120)
+        self.text_box9.place(x=1220, y=120)
 
         self.update_board(self.start_state)
 
         self.algo_frame1 = tk.Frame(root, bg="lightgray")
-        self.algo_frame1.place(x=350, y=20)
+        self.algo_frame1.place(x=450, y=20)
 
         self.algo_frame2 = tk.Frame(root, bg="lightgray")
-        self.algo_frame2.place(x=350, y=70)
+        self.algo_frame2.place(x=450, y=70)
 
         self.algo_frame3 = tk.Frame(root, bg="lightgray")
-        self.algo_frame3.place(x=350, y=120)
+        self.algo_frame3.place(x=450, y=120)
 
         self.algo_frame4 = tk.Frame(root, bg="lightgray")
-        self.algo_frame4.place(x=350, y=170)
+        self.algo_frame4.place(x=450, y=170)
 
         self.algo_frame5 = tk.Frame(root, bg="lightgray")
-        self.algo_frame5.place(x=90, y=340)
+        self.algo_frame5.place(x=190, y=340)
 
         self.algo_frame6 = tk.Frame(root, bg="lightgray")
-        self.algo_frame6.place(x=350, y=220)
+        self.algo_frame6.place(x=450, y=220)
 
         self.algo_frame7 = tk.Frame(root, bg="lightgray")
-        self.algo_frame7.place(x=350, y=270)
+        self.algo_frame7.place(x=450, y=270)
 
         self.algo_frame8 = tk.Frame(root, bg="lightgray")
-        self.algo_frame8.place(x=350, y=320)
+        self.algo_frame8.place(x=450, y=320)
 
         self.import_data_btn = tk.Button(root, text="Import Data", font=("Arial", 12), width=10, height=1, command=self.import_data)
-        self.import_data_btn.place(x=1030, y=180)
+        self.import_data_btn.place(x=1130, y=180)
 
         self.import_data_btn = tk.Button(root, text="Random", font=("Arial", 12), width=10, height=1, command=self.generate_random)
-        self.import_data_btn.place(x=1030, y=230)
+        self.import_data_btn.place(x=1130, y=230)
 
         self.bfs_btn = tk.Button(self.algo_frame1, text="BFS", font=("Arial", 12), command=lambda: self.solve_puzzle(bfs_8_puzzle))
         self.bfs_btn.pack(side=tk.LEFT, padx=3, anchor="w")
@@ -924,6 +942,13 @@ class PuzzleApp:
         self.time_label = tk.Label(self.algo_frame5, text="Time: 0s", font=("Arial", 12))
         self.time_label.grid(row=0, column=1, padx=3, sticky="w")
 
+    def display_tuple_state(self, board):
+        board_tuple = tuple(tuple(row) for row in board)
+        for row in board_tuple:
+            self.state_text.insert(tk.END, str(row) + "\n")
+        self.state_text.insert(tk.END, "\n")  # Dòng trắng phân cách giữa các trạng thái
+        self.state_text.see(tk.END)
+
     def update_board(self, board):
         for i in range(3):
             for j in range(3):
@@ -932,8 +957,7 @@ class PuzzleApp:
 
     def solve_puzzle(self, algorithm):
         start_time = time.perf_counter()
-
-        if self.start_state == self.goal_state:
+        if self.start_state == self.goal_state or self.flag == True:
             end_time = time.perf_counter()
             execution_time = end_time - start_time
             self.time_label.config(text=f"Time: {execution_time:.6f}s")
@@ -941,6 +965,7 @@ class PuzzleApp:
             return
 
         self.solution = algorithm(self.start_state, self.goal_state)
+        self.flag = True;
         end_time = time.perf_counter()
         execution_time = end_time - start_time
         self.time_label.config(text=f"Time: {execution_time:.6f}s")
@@ -955,11 +980,11 @@ class PuzzleApp:
 
     def animate_solution(self):
         if self.current_step < len(self.solution):
-            self.update_board(self.solution[self.current_step])            
+            self.update_board(self.solution[self.current_step])
+            self.display_tuple_state(self.solution[self.current_step])
             self.current_step += 1
             self.step_count = self.current_step
             self.step_label.config(text=f"Steps: {self.step_count}")
-
             self.root.after(500, self.animate_solution)
         else:
             messagebox.showinfo("Thành công", "Đã giải xong bài toán!")
@@ -1009,6 +1034,8 @@ class PuzzleApp:
         self.text_box7.delete("1.0", tk.END)
         self.text_box8.delete("1.0", tk.END)
         self.text_box9.delete("1.0", tk.END)
+        self.state_text.delete("1.0", tk.END)
+        self.flag = False
 
 if __name__ == "__main__":
     root = tk.Tk()
