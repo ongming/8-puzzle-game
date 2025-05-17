@@ -4,19 +4,19 @@
 
 ---
 
-## 2. 🎯 Mục tiêu của dự án
+## 1. 🎯 Mục tiêu của dự án
 
 Mục tiêu chính của dự án là triển khai một nền tảng giải bài toán 8-puzzle một cách hiệu quả, cho phép người dùng có thể quan sát và thực hành giải bài toán này thông qua giao diện trực quan. Dự án tập trung áp dụng nhiều thuật toán trí tuệ nhân tạo đa dạng, từ những phương pháp tìm kiếm cơ bản cho đến các thuật toán nâng cao, nhằm khai thác và so sánh hiệu suất của từng thuật toán trong việc tìm ra lời giải tối ưu hoặc gần tối ưu. Ngoài ra, dự án còn hướng tới việc cung cấp một công cụ hữu ích cho mục đích giáo dục và nghiên cứu, giúp người học và nhà nghiên cứu hiểu rõ hơn về các kỹ thuật tìm kiếm trong không gian trạng thái, từ đó nâng cao kiến thức và kỹ năng về trí tuệ nhân tạo và giải thuật.
 
 ---
-## 🎮 Giao diện trò chơi
+## 2. 🎮 Giao diện trò chơi
 
 Hình ảnh giao diện game được xây dựng bằng thư viện Tkinter:
 
 ![Screenshot 2025-05-16 230648](https://github.com/user-attachments/assets/1b4ec3d3-0727-444e-9cc7-6493801633a2)
 
 ---
-## 🕹️ Hướng dẫn cách chơi
+## 3. 🕹️ Hướng dẫn cách chơi
 
 _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
  ### CÁCH TRUYỀN DỮ LIỆU:
@@ -27,7 +27,7 @@ _Vui lòng ghi hướng dẫn chi tiết tại đây, ví dụ:_
 - Phía dưới sẽ hiển thị thời gian chạy và cần bao nhiêu bước để giải.
 - Bên cạnh 8 ô chữ chính là hiển thị các trạng thái của 8 puzzle sau từng bước giải.
 ---
-## 🧠 Các thuật toán được tích hợp
+## 4. 🧠 Các thuật toán được tích hợp
 Trong đồ án này, hệ thống được xây dựng với khả năng hỗ trợ tới 20 thuật toán trí tuệ nhân tạo để tự động giải bài toán 8-Puzzle. Mỗi thuật toán có đặc điểm và cách tiếp cận riêng biệt nhằm tìm ra chuỗi di chuyển tối ưu để đạt được trạng thái đích.
 
 Đầu tiên là các thuật toán tìm kiếm cơ bản như Breadth-First Search (BFS) và Depth-First Search (DFS), với BFS khám phá trạng thái theo lớp từng bước từ trạng thái ban đầu còn DFS đi sâu theo nhánh trước khi quay lui. Uniform Cost Search (UCS) tiếp tục phát triển bằng cách ưu tiên các bước di chuyển có chi phí thấp nhất. Thuật toán Iterative Deepening kết hợp ưu điểm của BFS và DFS bằng cách giới hạn độ sâu từng vòng lặp để cân bằng giữa bộ nhớ và thời gian.
@@ -168,7 +168,7 @@ Việc nghiên cứu, triển khai và so sánh các thuật toán này không c
 
 ---
 
-## 💻 Công nghệ sử dụng
+## 5. 💻 Công nghệ sử dụng
 
 - Ngôn  ngữ Python
 - Tkinter – GUI Framework
@@ -176,7 +176,7 @@ Việc nghiên cứu, triển khai và so sánh các thuật toán này không c
 
 ---
 
-📚 Tài liệu sách
+## 6. 📚 Tài liệu sách
 - Stuart Russell, Peter Norvig (2020). Artificial Intelligence: A Modern Approach (4th Edition). Pearson.
 → Giáo trình kinh điển, trình bày chi tiết về các thuật toán tìm kiếm như BFS, DFS, A*, Hill Climbing, Simulated Annealing, Q-learning,...
 
