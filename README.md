@@ -40,7 +40,7 @@ Bên cạnh đó, các thuật toán metaheuristic như Genetic Algorithm mô ph
 Dưới đây là bảng tổng hợp kèm theo các ảnh GIF mô phỏng trực quan minh họa quá trình giải của từng thuật toán:
 Hệ thống hỗ trợ **20 thuật toán AI** để giải bài toán 8-puzzle một cách tự động. Dưới đây là danh sách thuật toán và hình ảnh động minh họa từng thuật toán:
 ---
-## 1. Uninformed Search Algorithms
+## 4.1. Uninformed Search Algorithms
 Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuristic mà chỉ dựa vào cấu trúc không gian trạng thái:
 - **Breadth-First Search (BFS)**: Tìm kiếm theo tầng, mở rộng các nút theo cấp độ từ gốc đến sâu dần, đảm bảo tìm được lời giải ngắn nhất về số bước đi nhưng có thể tiêu tốn bộ nhớ lớn khi không gian trạng thái rộng.
 - **Depth-First Search (DFS)**: Tìm kiếm theo chiều sâu, đi sâu đến cùng một nhánh trước khi quay lui. Ưu điểm là sử dụng ít bộ nhớ nhưng không đảm bảo tìm lời giải ngắn nhất và có thể rơi vào vòng lặp vô tận nếu không kiểm soát.
@@ -61,7 +61,7 @@ Nhóm các thuật toán tìm kiếm không thông tin, không dùng hàm heuris
 - Nhược điểm: Không tối ưu về thời gian, tiêu tốn bộ nhớ lớn, DFS dễ rơi vào vòng lặp.
 
 ---
-## 2. Informed Search Algorithms
+## 4.2. Informed Search Algorithms
 Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic để dẫn đường tìm kiếm hiệu quả hơn:
 - **Greedy Best-First Search**: Luôn chọn mở rộng nút có giá trị heuristic nhỏ nhất, tìm kiếm nhanh nhưng không đảm bảo lời giải tối ưu.
 - **A* Search**: Kết hợp chi phí đã đi và ước lượng còn lại, luôn đảm bảo tìm lời giải tối ưu nếu hàm heuristic là hợp lệ (không vượt quá chi phí thực).
@@ -79,7 +79,7 @@ Nhóm các thuật toán tìm kiếm có thông tin, sử dụng hàm heuristic 
 - Ưu điểm: Giảm thời gian tìm kiếm đáng kể, thường đưa ra lời giải ngắn và tối ưu (đặc biệt A*).
 
 - Nhược điểm: Phụ thuộc vào chất lượng heuristic; Greedy có thể nhanh nhưng không tối ưu; A* tiêu tốn nhiều bộ nhớ.
-## 3. Local Search and Metaheuristic Algorithms
+## 4.3. Local Search and Metaheuristic Algorithms
 Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng các kỹ thuật tối ưu hóa để tìm giải pháp gần tối ưu:
 - **Steepest Hill Climbing (SHC) & Steppest Ascent Hill Climbing (SAHC)**: Luôn chọn bước đi làm cải thiện lớn nhất trên đường đi lên “đồi”, nhanh nhưng dễ bị mắc kẹt tại điểm tối ưu cục bộ.
 - **Stochastic Hill Climbing**: Giới thiệu tính ngẫu nhiên trong chọn bước đi để tránh bị kẹt tại điểm cục bộ.
@@ -103,7 +103,7 @@ Nhóm các thuật toán tìm kiếm cục bộ và metaheuristic, sử dụng c
 
 - Nhược điểm: Không đảm bảo tìm được lời giải tối ưu; dễ rơi vào bẫy tối ưu cục bộ; hiệu quả phụ thuộc nhiều vào tham số và cách khởi tạo.
 
-## 4. Specialized and Advanced Search Algorithms
+## 4.4. Specialized and Advanced Search Algorithms
 Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đặc biệt để giải quyết các bài toán phức tạp hơn:
 - **AND-OR BFS**: Giải quyết các bài toán không chắc chắn hoặc có nhiều lựa chọn thay thế, tìm kiếm trong không gian trạng thái dạng cây AND-OR, hỗ trợ lý luận phức tạp hơn.
 - **Belief-based Search**: Sử dụng thông tin niềm tin (belief) về trạng thái thực sự trong môi trường không chắc chắn để hướng dẫn tìm kiếm, áp dụng trong các tình huống có thông tin bị thiếu hoặc nhiễu.
@@ -120,7 +120,7 @@ Nhóm các thuật toán mở rộng, kết hợp hoặc các thuật toán đ�
 
 - Nhược điểm: Ít phù hợp với 8-Puzzle thông thường; một số thuật toán khá phức tạp và khó triển khai hiệu quả.
 
-## 5. Reinforcement Learning and Machine Learning Based Algorithms
+## 4.5. Reinforcement Learning and Machine Learning Based Algorithms
 Nhóm các thuật toán dựa trên học tăng cường hoặc học máy để tìm giải pháp thông qua việc học:
 - **Sarsa**: Thuật toán học tăng cường on-policy, học chính sách bằng cách cập nhật giá trị hành động dựa trên trải nghiệm thực tế, phù hợp với bài toán có trạng thái và hành động rời rạc.
 - **Q Learning**: Thuật toán học tăng cường off-policy, học giá trị tối ưu của các hành động mà không cần thực hiện chính sách hiện tại, giúp đạt hiệu suất tốt trong việc học các chính sách tối ưu.
@@ -137,7 +137,7 @@ Nhóm các thuật toán dựa trên học tăng cường hoặc học máy đ�
 
 - Nhược điểm: Cần nhiều thời gian để huấn luyện; yêu cầu điều chỉnh tham số tốt (learning rate, discount factor).
 
-## 6. Constraint Satisfaction Problem (CSP) Algorithms
+## 4.6. Constraint Satisfaction Problem (CSP) Algorithms
 Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward checking để tối ưu hóa tìm kiếm trong các bài toán thỏa mãn ràng buộc:
 - **Backtracking**: Kỹ thuật đệ quy tìm kiếm lời giải bằng cách thử từng lựa chọn và quay lui khi phát hiện mâu thuẫn, dễ hiểu nhưng có thể tốn thời gian nếu không được tối ưu.
 - **Backtracking + Forward Checking**: Kết hợp forward checking để loại bỏ các lựa chọn không hợp lệ trước khi đi sâu vào các nhánh tìm kiếm, giúp giảm số lượng bước đi không cần thiết.
@@ -157,7 +157,7 @@ Nhóm các thuật toán tập trung vào kỹ thuật backtracking và forward 
 - Nhược điểm: Hiệu suất thấp với bài toán không có ràng buộc cụ thể như 8-Puzzle; Forward Checking có cải tiến nhưng vẫn không tối ưu bằng A*.
 
 ---
-## Kết luận
+## 5.Kết luận
 Bài toán 8-Puzzle là một ví dụ điển hình về tìm kiếm trong không gian trạng thái, và việc áp dụng đa dạng các thuật toán giải quyết không chỉ giúp hiểu rõ về các phương pháp tìm kiếm mà còn mở rộng khả năng so sánh, đánh giá hiệu suất của từng kỹ thuật trong thực tế. Các thuật toán uninformed search như BFS, DFS tuy đơn giản nhưng có thể gặp hạn chế về mặt hiệu quả khi không biết trước trạng thái đích. Trong khi đó, các thuật toán informed search như A* và IDA* tận dụng tốt thông tin heuristic, giúp rút ngắn thời gian tìm lời giải tối ưu.
 
 Nhóm thuật toán local search và metaheuristic cung cấp những phương pháp linh hoạt, khả năng xử lý các trường hợp phức tạp và không gian trạng thái lớn, tuy không luôn đảm bảo tối ưu tuyệt đối nhưng thích hợp cho bài toán thực tế cần giải nhanh. Các thuật toán học tăng cường và machine learning như Sarsa, Q-Learning mở ra hướng tiếp cận mới, tận dụng kinh nghiệm để tự điều chỉnh chiến lược giải quyết, rất hứa hẹn cho các bài toán phức tạp hơn.
@@ -168,7 +168,7 @@ Việc nghiên cứu, triển khai và so sánh các thuật toán này không c
 
 ---
 
-## 5. 💻 Công nghệ sử dụng
+## 6. 💻 Công nghệ sử dụng
 
 - Ngôn  ngữ Python
 - Tkinter – GUI Framework
@@ -176,7 +176,7 @@ Việc nghiên cứu, triển khai và so sánh các thuật toán này không c
 
 ---
 
-## 6. 📚 Tài liệu sách
+## 7. 📚 Tài liệu sách
 - Stuart Russell, Peter Norvig (2020). Artificial Intelligence: A Modern Approach (4th Edition). Pearson.
 → Giáo trình kinh điển, trình bày chi tiết về các thuật toán tìm kiếm như BFS, DFS, A*, Hill Climbing, Simulated Annealing, Q-learning,...
 
